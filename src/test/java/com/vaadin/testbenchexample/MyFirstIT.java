@@ -22,6 +22,12 @@ import java.io.File;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * This test is run by the maven-failsafe-plugin, requires the app to be running
+ * in a separate process (handled by jetty-maven-plugin's start-jetty and stop-jetty
+ * Maven executions) and uses TestBench+Selenium to connect to the running app
+ * and test using an actual browser.
+ */
 @RunWith(BlockJUnit4ClassRunner.class)
 public class MyFirstIT extends TestBenchTestCase {
 	/**
